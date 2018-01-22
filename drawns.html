@@ -1,0 +1,32 @@
+<html>
+<head>
+<style type="text/css">
+body { margin: 50px; background: #666; }
+#my_canvas { background: #FFF; border: #000 1px solid; }
+</style>
+<script type="text/javascript">
+//window.onload = draw;
+function draw(){
+var ctx = document.getElementById('my_canvas').getContext('2d');
+ctx.fillStyle="magenta";
+ctx.fillRect(20, 20, 100, 100);
+ctx.fillRect(200, 200, 50, 50); //도형에 색 칠한 거
+ctx.fillRect(20, 20, 100, 100);
+ctx.strokeRect(20, 20, 100, 100);
+ctx.strokeRect(200, 200, 50, 50); // 선 긋는 거
+//ctx.clearRect(x, y, w, h)
+}
+function dele(){
+var ctax = document.getElementById('my_canvas').getContext('2d');
+ctax.clearRect(10, 10, 20, 20)
+}
+</script>
+</head>
+<body>
+<canvas id="my_canvas" width="400" height="300"></canvas>
+<button onclick="draw()">클릭1</button>
+<button onclick="dele()">클릭</button>
+
+
+</body>
+</html>
